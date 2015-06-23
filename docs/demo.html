@@ -1,0 +1,723 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Amaze UI slick 使用演示 | Amaze UI 插件</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png"
+        href="http://s.amazeui.org/assets/2.x/i/favicon.png">
+  <link rel="stylesheet"
+        href="http://cdn.amazeui.org/amazeui/2.4.0/css/amazeui.min.css">
+  <link rel="stylesheet" href="http://s.amazeui.org/assets/plugin/css/app.min.css">
+  <!--[if (gte IE 9)|!(IE)]><!-->
+  <script src="http://cdn.amazeui.org/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://cdn.amazeui.org/amazeui/2.4.0/js/amazeui.min.js"></script>
+  <!--<![endif]-->
+  <!--[if lte IE 8 ]>
+  <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../amazeui.slick.css"/>
+</head>
+<body class="am-plugin">
+<header class="am-topbar am-topbar-inverse">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="http://amazeui.org" class="am-text-ir">Amaze UI</a>
+      <span class="am-badge am-badge-danger">Plugin</span>
+    </h1>
+  </div>
+</header>
+<section class="amp-banner">
+  <div class="am-container">
+    <h1>Amaze UI Slick</h1>
+    <p class="">jQuery Slick 插件 Amaze UI 样式集成</p>
+      <p>
+        <a class="github-button" href="https://github.com/amazeui/slick">Star</a>
+        <a class="github-button" href="https://github.com/amazeui/slick">Fork</a>
+        <a class="github-button" href="https://github.com/amazeui/slick/archive/master.zip">Download</a>
+      </p>
+  </div>
+</section>
+
+<section class="amp-main">
+  <div class="am-container amp-content">
+    <h2><a name="slick-shi-yong-yan-shi" class="anchor" href="#slick-shi-yong-yan-shi"><span class="header-link"></span></a>Slick 使用演示</h2><h3><a name="yi-ping-yi-ge" class="anchor" href="#yi-ping-yi-ge"><span class="header-link"></span></a>一屏一个</h3><style>
+  .slick-slide {
+  }
+  .slick-slide h3 {
+    border: 1px solid #dedede;
+    background: #efefef;
+    margin: 10px;
+    font-size: 24px;
+    color: #0066bb;
+    padding: 50px 0;
+    text-align: center;
+  }
+  .slick-slider {
+    margin: 30px 50px;
+  }
+
+  .center h3 {
+    opacity: 0.6;
+    transition: all 300ms ease;
+  }
+
+  .center .slick-center h3 {
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    -webkit-transform: scale(1.08);
+    color: #E67E22;
+    opacity: 1;
+    transform: scale(1.08);
+  }
+</style>
+
+<div class="doc-example"><div class="slider single-item">
+  <div><h3>1</h3></div>
+  <div><h3>2</h3></div>
+  <div><h3>3</h3></div>
+  <div><h3>4</h3></div>
+  <div><h3>5</h3></div>
+  <div><h3>6</h3></div>
+</div></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"slider single-item"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'.single-item'</span>).slick({
+  dots: <span class="hljs-literal">true</span>,
+  infinite: <span class="hljs-literal">true</span>,
+  speed: <span class="hljs-number">500</span>,
+  slidesToShow: <span class="hljs-number">1</span>,
+  slidesToScroll: <span class="hljs-number">1</span>
+});</code></pre></div><h3><a name="yi-ping-duo-ge" class="anchor" href="#yi-ping-duo-ge"><span class="header-link"></span></a>一屏多个</h3><div class="doc-example"><div class="slider multiple-items">
+  <div><h3>1</h3></div>
+  <div><h3>2</h3></div>
+  <div><h3>3</h3></div>
+  <div><h3>4</h3></div>
+  <div><h3>5</h3></div>
+  <div><h3>6</h3></div>
+  <div><h3>7</h3></div>
+  <div><h3>8</h3></div>
+  <div><h3>9</h3></div>
+</div></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"slider multiple-items"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>8<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>9<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'.multiple-items'</span>).slick({
+  dots: <span class="hljs-literal">true</span>,
+  infinite: <span class="hljs-literal">true</span>,
+  speed: <span class="hljs-number">500</span>,
+  slidesToShow: <span class="hljs-number">3</span>,
+  slidesToScroll: <span class="hljs-number">3</span>
+});</code></pre></div><h3><a name="xiang-ying-shi-she-zhi" class="anchor" href="#xiang-ying-shi-she-zhi"><span class="header-link"></span></a>响应式设置</h3><p>不同的屏幕显示不同的个数，缩放窗口查看效果。</p>
+<div class="doc-example"><div class="slider responsive">
+  <div><h3>1</h3></div>
+  <div><h3>2</h3></div>
+  <div><h3>3</h3></div>
+  <div><h3>4</h3></div>
+  <div><h3>5</h3></div>
+  <div><h3>6</h3></div>
+  <div><h3>7</h3></div>
+  <div><h3>8</h3></div>
+</div></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"slider responsive"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>8<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'.responsive'</span>).slick({
+  dots: <span class="hljs-literal">true</span>,
+  infinite: <span class="hljs-literal">false</span>,
+  speed: <span class="hljs-number">500</span>,
+  slidesToShow: <span class="hljs-number">4</span>,
+  slidesToScroll: <span class="hljs-number">4</span>,
+  responsive: [{
+    breakpoint: <span class="hljs-number">1024</span>,
+    settings: {
+      slidesToShow: <span class="hljs-number">3</span>,
+      slidesToScroll: <span class="hljs-number">3</span>,
+      infinite: <span class="hljs-literal">true</span>,
+      dots: <span class="hljs-literal">true</span>
+    }
+  }, {
+    breakpoint: <span class="hljs-number">600</span>,
+    settings: {
+      slidesToShow: <span class="hljs-number">2</span>,
+      slidesToScroll: <span class="hljs-number">2</span>
+    }
+  }, {
+    breakpoint: <span class="hljs-number">480</span>,
+    settings: {
+      slidesToShow: <span class="hljs-number">1</span>,
+      slidesToScroll: <span class="hljs-number">1</span>
+    }
+  }]
+});</code></pre></div><h3><a name="bu-tong-kuan-du-de-slide" class="anchor" href="#bu-tong-kuan-du-de-slide"><span class="header-link"></span></a>不同宽度的 slide</h3><div class="doc-example"><div class="slider variable-width">
+  <div style="width: 200px;"><h3>200</h3></div>
+  <div style="width: 175px;"><h3>175</h3></div>
+  <div style="width: 150px;"><h3>150</h3></div>
+  <div style="width: 300px;"><h3>300</h3></div>
+  <div style="width: 225px;"><h3>225</h3></div>
+  <div style="width: 125px;"><h3>125</h3></div>
+</div></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"slider variable-width"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 200px;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>200<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 175px;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>175<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 150px;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>150<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 300px;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>300<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 225px;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>225<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width: 125px;"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>125<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'.variable-width'</span>).slick({
+  dots: <span class="hljs-literal">true</span>,
+  infinite: <span class="hljs-literal">true</span>,
+  speed: <span class="hljs-number">500</span>,
+  slidesToShow: <span class="hljs-number">1</span>,
+  centerMode: <span class="hljs-literal">true</span>,
+  variableWidth: <span class="hljs-literal">true</span>
+});</code></pre></div><h3><a name="bu-tong-gao-du-de-slide" class="anchor" href="#bu-tong-gao-du-de-slide"><span class="header-link"></span></a>不同高度的 slide</h3><div class="doc-example"><div class="slider one-time">
+  <div><h3>1</h3></div>
+  <div><h3>2</h3><p>Look ma!</p></div>
+  <div><h3>3</h3><p>Check<br/>this out!</p></div>
+  <div><h3>4</h3><p>Woo!</p></div>
+</div></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"slider one-time"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Look ma!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Check<span class="hljs-tag">&lt;<span class="hljs-title">br</span>/&gt;</span>this out!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Woo!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'.one-time'</span>).slick({
+  dots: <span class="hljs-literal">true</span>,
+  infinite: <span class="hljs-literal">true</span>,
+  speed: <span class="hljs-number">500</span>,
+  slidesToShow: <span class="hljs-number">1</span>,
+  adaptiveHeight: <span class="hljs-literal">true</span>
+});</code></pre></div><h3><a name="codedata-slickcode-she-zhi-can-shu" class="anchor" href="#codedata-slickcode-she-zhi-can-shu"><span class="header-link"></span></a><code>data-slick</code> 设置参数</h3><p>通过 <code>data-slick</code> 设置参数仍需要 JS 初始化。</p>
+<div class="doc-example"><div class="data" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+  <div><h3>1</h3></div>
+  <div><h3>2</h3></div>
+  <div><h3>3</h3></div>
+  <div><h3>4</h3></div>
+  <div><h3>5</h3></div>
+  <div><h3>6</h3></div>
+</div></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"data"</span> <span class="hljs-attribute">data-slick</span>=<span class="hljs-value">'{"slidesToShow": 4, "slidesToScroll": 4}'</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'.data'</span>).slick();</code></pre></div><h3><a name="ju-zhong-mo-shi" class="anchor" href="#ju-zhong-mo-shi"><span class="header-link"></span></a>居中模式</h3><p>居中模式会在激活 slide 上添加 <code>.slick-center</code>，根据需要定制样式。</p>
+<div class="doc-example"><div class="slider center">
+  <div><h3>1</h3></div>
+  <div><h3>2</h3></div>
+  <div><h3>3</h3></div>
+  <div><h3>4</h3></div>
+  <div><h3>5</h3></div>
+  <div><h3>6</h3></div>
+</div></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"slider center"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'.center'</span>).slick({
+  centerMode: <span class="hljs-literal">true</span>,
+  infinite: <span class="hljs-literal">true</span>,
+  centerPadding: <span class="hljs-string">'60px'</span>,
+  slidesToShow: <span class="hljs-number">3</span>,
+  speed: <span class="hljs-number">500</span>,
+  responsive: [{
+    breakpoint: <span class="hljs-number">768</span>,
+    settings: {
+      arrows: <span class="hljs-literal">false</span>,
+      centerMode: <span class="hljs-literal">true</span>,
+      centerPadding: <span class="hljs-string">'40px'</span>,
+      slidesToShow: <span class="hljs-number">3</span>
+    }
+  }, {
+    breakpoint: <span class="hljs-number">480</span>,
+    settings: {
+      arrows: <span class="hljs-literal">false</span>,
+      centerMode: <span class="hljs-literal">true</span>,
+      centerPadding: <span class="hljs-string">'40px'</span>,
+      slidesToShow: <span class="hljs-number">1</span>
+    }
+  }]
+});</code></pre></div><div class="doc-code demo-highlight"><pre><code class="css"><span class="hljs-class">.center</span> <span class="hljs-tag">h3</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">opacity</span>:<span class="hljs-value"> <span class="hljs-number">0.6</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transition</span>:<span class="hljs-value"> all <span class="hljs-number">300ms</span> ease</span></span>;
+}</span>
+
+<span class="hljs-class">.center</span> <span class="hljs-class">.slick-center</span> <span class="hljs-tag">h3</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">-moz-transform</span>:<span class="hljs-value"> <span class="hljs-function">scale</span>(<span class="hljs-number">1.08</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-ms-transform</span>:<span class="hljs-value"> <span class="hljs-function">scale</span>(<span class="hljs-number">1.08</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-o-transform</span>:<span class="hljs-value"> <span class="hljs-function">scale</span>(<span class="hljs-number">1.08</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-transform</span>:<span class="hljs-value"> <span class="hljs-function">scale</span>(<span class="hljs-number">1.08</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#E67E22</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">opacity</span>:<span class="hljs-value"> <span class="hljs-number">1</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">scale</span>(<span class="hljs-number">1.08</span>)</span></span>;
+}</span></code></pre></div><h3><a name="tu-pian-lan-jia-zai" class="anchor" href="#tu-pian-lan-jia-zai"><span class="header-link"></span></a>图片懒加载</h3><style>
+.lazy img {
+  width: 200px;
+  height: 200px;
+  padding: 2px;
+  border: 1px solid #dedede;
+}
+</style>
+
+<div class="doc-example"><div class="slider lazy">
+  <div><div class="image"><img data-lazy="http://lorempixel.com/800/800/city"/></div></div>
+  <div><div class="image"><img data-lazy="http://lorempixel.com/800/800/food"/></div></div>
+  <div><div class="image"><img data-lazy="http://lorempixel.com/800/800/nature"/></div></div>
+  <div><div class="image"><img data-lazy="http://lorempixel.com/800/800/people"/></div></div>
+  <div><div class="image"><img data-lazy="http://lorempixel.com/800/800/animals"/></div></div>
+  <div><div class="image"><img data-lazy="http://lorempixel.com/800/800/technics"/></div></div>
+</div></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"slider lazy"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"image"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">data-lazy</span>=<span class="hljs-value">"http://lorempixel.com/800/800/city"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"image"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">data-lazy</span>=<span class="hljs-value">"http://lorempixel.com/800/800/food"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"image"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">data-lazy</span>=<span class="hljs-value">"http://lorempixel.com/800/800/nature"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"image"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">data-lazy</span>=<span class="hljs-value">"http://lorempixel.com/800/800/people"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"image"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">data-lazy</span>=<span class="hljs-value">"http://lorempixel.com/800/800/animals"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"image"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">data-lazy</span>=<span class="hljs-value">"http://lorempixel.com/800/800/technics"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'.lazy'</span>).slick({
+  lazyLoad: <span class="hljs-string">'ondemand'</span>,
+  slidesToShow: <span class="hljs-number">3</span>,
+  slidesToScroll: <span class="hljs-number">1</span>,
+  speed: <span class="hljs-number">500</span>
+});</code></pre></div><h3><a name="zi-dong-bo-fang" class="anchor" href="#zi-dong-bo-fang"><span class="header-link"></span></a>自动播放</h3><div class="doc-example"><div class="slider autoplay">
+  <div><h3>1</h3></div>
+  <div><h3>2</h3></div>
+  <div><h3>3</h3></div>
+  <div><h3>4</h3></div>
+  <div><h3>5</h3></div>
+  <div><h3>6</h3></div>
+</div></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"slider autoplay"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'.autoplay'</span>).slick({
+  dots: <span class="hljs-literal">true</span>,
+  infinite: <span class="hljs-literal">true</span>,
+  speed: <span class="hljs-number">500</span>,
+  slidesToShow: <span class="hljs-number">3</span>,
+  slidesToScroll: <span class="hljs-number">1</span>,
+  autoplay: <span class="hljs-literal">true</span>,
+  autoplaySpeed: <span class="hljs-number">2000</span>
+});</code></pre></div><h3><a name="fade-xiao-guo" class="anchor" href="#fade-xiao-guo"><span class="header-link"></span></a>Fade 效果</h3><style>
+  .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+</style>
+
+<div class="doc-example"><div class="slider fade">
+  <div><div class="image"><img data-lazy="http://lorempixel.com/1600/600/city"/></div></div>
+  <div><div class="image"><img data-lazy="http://lorempixel.com/1600/600/food"/></div></div>
+  <div><div class="image"><img data-lazy="http://lorempixel.com/1600/600/nature"/></div></div>
+</div></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"slider fade"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"image"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">data-lazy</span>=<span class="hljs-value">"http://lorempixel.com/1600/600/city"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"image"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">data-lazy</span>=<span class="hljs-value">"http://lorempixel.com/1600/600/food"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"image"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">data-lazy</span>=<span class="hljs-value">"http://lorempixel.com/1600/600/nature"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><h3><a name="dong-tai-cha-ru-slide" class="anchor" href="#dong-tai-cha-ru-slide"><span class="header-link"></span></a>动态插入 slide</h3><div class="doc-example"><div class="slider add-remove">
+  <div><h3>1</h3></div>
+</div>
+<br />
+<div class="am-btn-toolbar am-text-center">
+  <a href="javascript:void(0)" class="am-btn am-btn-primary js-add-slide">添加 Slide</a>
+  <a href="javascript:void(0)" class="am-btn am-btn-danger js-remove-slide">移除 Slide</a>
+</div></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"slider add-remove"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"am-btn-toolbar am-text-center"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"am-btn am-btn-primary js-add-slide"</span>&gt;</span>添加 Slide<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"am-btn am-btn-danger js-remove-slide"</span>&gt;</span>移除 Slide<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript"><span class="hljs-keyword">var</span> slideIndex = <span class="hljs-number">1</span>;
+
+$(<span class="hljs-string">'.js-add-slide'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  slideIndex++;
+  $(<span class="hljs-string">'.add-remove'</span>).slick(<span class="hljs-string">'slickAdd'</span>,<span class="hljs-string">'&lt;div&gt;&lt;h3&gt;'</span> + slideIndex + <span class="hljs-string">'&lt;/h3&gt;&lt;/div&gt;'</span>);
+});
+
+$(<span class="hljs-string">'.js-remove-slide'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-string">'.add-remove'</span>).slick(<span class="hljs-string">'slickRemove'</span>,slideIndex - <span class="hljs-number">1</span>);
+  <span class="hljs-keyword">if</span> (slideIndex !== <span class="hljs-number">0</span>){
+    slideIndex--;
+  }
+});</code></pre></div><h3><a name="guo-lu-slide" class="anchor" href="#guo-lu-slide"><span class="header-link"></span></a>过滤 Slide</h3><div class="doc-example"><div class="slider filtering">
+  <div><h3>1</h3></div>
+  <div><h3>2</h3></div>
+  <div><h3>3</h3></div>
+  <div><h3>4</h3></div>
+  <div><h3>5</h3></div>
+  <div><h3>6</h3></div>
+  <div><h3>7</h3></div>
+  <div><h3>8</h3></div>
+  <div><h3>9</h3></div>
+  <div><h3>10</h3></div>
+  <div><h3>11</h3></div>
+  <div><h3>12</h3></div>
+</div>
+<div class="am-btn-toolbar am-text-center">
+  <a href="javascript:void(0)" class="am-btn am-btn-primary js-filter">Filter Slides</a>
+</div></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"slider filtering"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>8<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>9<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>10<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>11<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>12<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"am-btn-toolbar am-text-center"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"am-btn am-btn-primary js-filter"</span>&gt;</span>过滤 Slides<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'.filtering'</span>).slick({
+  dots: <span class="hljs-literal">true</span>,
+  speed: <span class="hljs-number">500</span>,
+  slidesToShow: <span class="hljs-number">4</span>,
+  slidesToScroll: <span class="hljs-number">4</span>
+});
+
+<span class="hljs-keyword">var</span> filtered = <span class="hljs-literal">false</span>;
+
+$(<span class="hljs-string">'.js-filter'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">if</span> (filtered === <span class="hljs-literal">false</span>) {
+    $(<span class="hljs-string">'.filtering'</span>).slick(<span class="hljs-string">'slickFilter'</span>,<span class="hljs-string">':even'</span>);
+    $(<span class="hljs-keyword">this</span>).text(<span class="hljs-string">'取消过滤 Slides'</span>);
+    filtered = <span class="hljs-literal">true</span>;
+  } <span class="hljs-keyword">else</span> {
+    $(<span class="hljs-string">'.filtering'</span>).slick(<span class="hljs-string">'slickUnfilter'</span>);
+    $(<span class="hljs-keyword">this</span>).text(<span class="hljs-string">'过滤 Slides'</span>);
+    filtered = <span class="hljs-literal">false</span>;
+  }
+});</code></pre></div><h3><a name="xiao-hui-shi-li" class="anchor" href="#xiao-hui-shi-li"><span class="header-link"></span></a>销毁实例</h3><div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'.your-slider'</span>).slick(<span class="hljs-string">'unslick'</span>);</code></pre></div><h3><a name="slider-tong-bu" class="anchor" href="#slider-tong-bu"><span class="header-link"></span></a>Slider 同步</h3><div class="doc-example"><div class="slider slider-for">
+  <div><h3>1</h3></div>
+  <div><h3>2</h3></div>
+  <div><h3>3</h3></div>
+  <div><h3>4</h3></div>
+  <div><h3>5</h3></div>
+</div>
+<div class="slider slider-nav">
+  <div><h3>1</h3></div>
+  <div><h3>2</h3></div>
+  <div><h3>3</h3></div>
+  <div><h3>4</h3></div>
+  <div><h3>5</h3></div>
+</div></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"slider slider-for"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"slider slider-nav"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'.slider-for'</span>).slick({
+  slidesToShow: <span class="hljs-number">1</span>,
+  slidesToScroll: <span class="hljs-number">1</span>,
+  speed: <span class="hljs-number">500</span>,
+  arrows: <span class="hljs-literal">false</span>,
+  fade: <span class="hljs-literal">true</span>,
+  asNavFor: <span class="hljs-string">'.slider-nav'</span>
+});
+
+$(<span class="hljs-string">'.slider-nav'</span>).slick({
+  slidesToShow: <span class="hljs-number">3</span>,
+  slidesToScroll: <span class="hljs-number">1</span>,
+  speed: <span class="hljs-number">500</span>,
+  asNavFor: <span class="hljs-string">'.slider-for'</span>,
+  dots: <span class="hljs-literal">true</span>,
+  centerMode: <span class="hljs-literal">true</span>,
+  focusOnSelect: <span class="hljs-literal">true</span>,
+  slide: <span class="hljs-string">'div'</span>
+});</code></pre></div><h3><a name="rtl" class="anchor" href="#rtl"><span class="header-link"></span></a>RTL</h3><div class="doc-example"><div dir="rtl" class="slider single-item-rtl">
+  <div><h3>1</h3></div>
+  <div><h3>2</h3></div>
+  <div><h3>3</h3></div>
+  <div><h3>4</h3></div>
+  <div><h3>5</h3></div>
+  <div><h3>6</h3></div>
+</div></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">dir</span>=<span class="hljs-value">"rtl"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"slider single-item-rtl"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'.single-item-rtl'</span>).slick({
+  dots: <span class="hljs-literal">true</span>,
+  infinite: <span class="hljs-literal">true</span>,
+  speed: <span class="hljs-number">500</span>,
+  slidesToShow: <span class="hljs-number">1</span>,
+  slidesToScroll: <span class="hljs-number">1</span>,
+  rtl: <span class="hljs-literal">true</span>
+});</code></pre></div><script src="../slick.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.single-item').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+
+    $('.multiple-items').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 3
+    });
+
+    $('.variable-width').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      centerMode: true,
+      variableWidth: true
+    });
+
+    $('.data').slick();
+
+    $('.one-time').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      adaptiveHeight: true
+    });
+
+    $('.uneven').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 4
+    });
+
+    $('.responsive').slick({
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }, {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }]
+    });
+
+    $('.center').slick({
+      centerMode: true,
+      infinite: true,
+      centerPadding: '60px',
+      slidesToShow: 3,
+      speed: 500,
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      }, {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }]
+    });
+
+    $('.lazy').slick({
+      lazyLoad: 'ondemand',
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      speed: 500
+    });
+
+    $('.autoplay').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000
+    });
+
+    $('.fade').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      slide: 'div',
+      cssEase: 'linear'
+    });
+
+    $('.add-remove').slick({
+      dots: true,
+      slidesToShow: 3,
+      speed: 500,
+      slidesToScroll: 3
+    });
+
+    var slideIndex = 1;
+    $('.js-add-slide').on('click', function() {
+      slideIndex++;
+      $('.add-remove').slick('slickAdd','<div><h3>' + slideIndex + '</h3></div>');
+    });
+
+    $('.js-remove-slide').on('click', function() {
+      $('.add-remove').slick('slickRemove',slideIndex - 1);
+      if (slideIndex !== 0){
+        slideIndex--;
+      }
+    });
+
+    $('.filtering').slick({
+      dots: true,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 4
+    });
+    var filtered = false;
+    $('.js-filter').on('click', function() {
+      if (filtered === false) {
+        $('.filtering').slick('slickFilter',':even');
+        $(this).text('取消过滤 Slides');
+        filtered = true;
+      } else {
+        $('.filtering').slick('slickUnfilter');
+        $(this).text('过滤 Slides');
+        filtered = false;
+      }
+    });
+
+    $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-nav'
+    });
+
+    $('.slider-nav').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      speed: 500,
+      asNavFor: '.slider-for',
+      dots: true,
+      centerMode: true,
+      focusOnSelect: true,
+      slide: 'div'
+    });
+
+    $('.single-item-rtl').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      rtl: true
+    });
+
+    $('.multiple-items-rtl').slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 3,
+      speed: 500,
+      slidesToScroll: 3,
+      rtl: true
+    });
+  });
+</script>
+
+
+    <nav class="amp-pager">
+        <ul class="am-pagination">
+          <li class="am-pagination-prev"><a href="../">&laquo; Prev</a>
+          </li>
+            <li class="am-pagination-next"><a href="api.html">Next &raquo;</a>
+            </li>
+        </ul>
+    </nav>
+  </div>
+</section>
+
+<footer class="amp-footer"><div class="am-g am-g-fixed"><div class="am-u-md-4 am-u-md-push-8"><ul class="amz-social"><li><a href="javascript: void(0)" data-am-popover="{content: 'Amaze UI 交流 Q 群：374946651'}" title="Amaze UI 用户交流群" target="_blank"><span class="am-icon-qq"></span></a></li><li><a href="http://weibo.com/allmobilize" title="云适配微博" target="_blank"><span class="am-icon-weibo"></span></a></li><li><a href="#am-wechat" title="云适配微信" data-am-modal><span class="am-icon-wechat"></span></a></li><li><a class="new-issue" href="https://github.com/allmobilize/amazeui/issues/new?title=Bug%3A%20&body=**%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0**%0A%0A%EF%BC%88%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E9%97%AE%E9%A2%98%EF%BC%89%0A%0A**%E4%BA%A7%E7%94%9F%E7%8E%AF%E5%A2%83**%0A%0A-%20%E8%AE%BE%E5%A4%87%EF%BC%9A%EF%BC%88%E6%89%8B%E6%9C%BA%E3%80%81%E5%B9%B3%E6%9D%BF%E7%AD%89%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87%E6%97%B6%E5%A1%AB%E5%86%99%E6%AD%A4%E9%A1%B9%EF%BC%89%0A-%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%BC%94%E7%A4%BA%E5%9C%B0%E5%9D%80%EF%BC%9A%0A%0A**%E5%A4%8D%E7%8E%B0%E6%AD%A5%E5%A5%8F**%0A%0A1.%20%0A2.%20%0A...%20%0A%20%0A**UA:**%20%0A" target="_blank" title="Bug 反馈"><span class="am-icon-paper-plane"></span></a></li></ul></div><div class="col-md-8 col-md-pull-4 am-u-md-8 am-u-md-pull-4"><h2 class="amz-fd"><a>云适配</a></h2><ul class="amz-links"><li><a href="http://amazeui.org/about/wantu" class="am-icon-heart">&nbsp;妹子招亲</a> | <a href="http://amazeui.org/about/contact">联系我们</a></li></ul><p class="amz-cp">&copy; 2015 AllMobilize, Inc. <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. Developed with <a href="http://www.jetbrains.com/webstorm/" target="_blank">WebStorm</a>.</p></div></div></footer><div class="am-modal am-modal-no-btn" tabindex="-1" id="am-wechat"><div class="am-modal-dialog"><div class="am-modal-hd"><a href="" class="am-close am-close-spin" data-am-modal-close>&times;</a></div><div class="am-modal-bd"><img src="http://s.amazeui.org/assets/2.x/i/am/qr-ui.jpg" alt="Amaze UI 微信"/><br/>在微信上关注我们</div></div></div><div class="amp-toolbar" id="amp-toolbar"><a href="#top" title="回到顶部" class="am-icon-btn am-icon-arrow-up" id="amp-go-top"></a></div>
+<script src="http://s.amazeui.org/assets/plugin/js/app.min.js"></script>
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?b424d39312c46404f15e22574a531fbb";
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hm);
+  })();
+
+  (function(w, d, s) {
+    function gs(){
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(w , d, s ,'//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-34196034-8', 'amazeui.org');
+      ga('send', 'pageview');
+    }
+    if (w.addEventListener) { w.addEventListener('load', gs, false); }
+    else if (w.attachEvent) { w.attachEvent('onload',gs); }
+  }(window, document, 'script'));
+</script>
+</body>
+</html>

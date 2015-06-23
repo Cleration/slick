@@ -1,0 +1,498 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Amaze UI slick API 列表 | Amaze UI 插件</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png"
+        href="http://s.amazeui.org/assets/2.x/i/favicon.png">
+  <link rel="stylesheet"
+        href="http://cdn.amazeui.org/amazeui/2.4.0/css/amazeui.min.css">
+  <link rel="stylesheet" href="http://s.amazeui.org/assets/plugin/css/app.min.css">
+  <!--[if (gte IE 9)|!(IE)]><!-->
+  <script src="http://cdn.amazeui.org/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://cdn.amazeui.org/amazeui/2.4.0/js/amazeui.min.js"></script>
+  <!--<![endif]-->
+  <!--[if lte IE 8 ]>
+  <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../amazeui.slick.css"/>
+</head>
+<body class="am-plugin">
+<header class="am-topbar am-topbar-inverse">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="http://amazeui.org" class="am-text-ir">Amaze UI</a>
+      <span class="am-badge am-badge-danger">Plugin</span>
+    </h1>
+  </div>
+</header>
+<section class="amp-banner">
+  <div class="am-container">
+    <h1>Amaze UI Slick</h1>
+    <p class="">jQuery Slick 插件 Amaze UI 样式集成</p>
+      <p>
+        <a class="github-button" href="https://github.com/amazeui/slick">Star</a>
+        <a class="github-button" href="https://github.com/amazeui/slick">Fork</a>
+        <a class="github-button" href="https://github.com/amazeui/slick/archive/master.zip">Download</a>
+      </p>
+  </div>
+</section>
+
+<section class="amp-main">
+  <div class="am-container amp-content">
+    <h1><a name="slick-api" class="anchor" href="#slick-api"><span class="header-link"></span></a>Slick API</h1><hr>
+<h2><a name="xuan-xiang" class="anchor" href="#xuan-xiang"><span class="header-link"></span></a>选项</h2><table class="am-table am-table-bordered am-table-striped"><thead><tr>
+<th>选项</th>
+<th>类型</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead><tbody><tr>
+<td>accessibility</td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>是否启动 Tab 和箭头导航</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>是否自动播放</td>
+</tr>
+<tr>
+<td>autoplaySpeed</td>
+<td>int</td>
+<td><code>3000</code></td>
+<td>自动播放速度</td>
+</tr>
+<tr>
+<td>centerMode</td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>居中模式</td>
+</tr>
+<tr>
+<td>centerPadding</td>
+<td>string</td>
+<td><code>&#39;50px&#39;</code></td>
+<td>居中模式时 slide padding (px 或 %)</td>
+</tr>
+<tr>
+<td>cssEase</td>
+<td>string</td>
+<td><code>&#39;ease&#39;</code></td>
+<td>CSS3 easing</td>
+</tr>
+<tr>
+<td>customPaging</td>
+<td>function</td>
+<td><code>n/a</code></td>
+<td>自定义分页模板</td>
+</tr>
+<tr>
+<td>dots</td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>是否显示分页指示点</td>
+</tr>
+<tr>
+<td>dotsClass</td>
+<td>string</td>
+<td><code>&#39;slick-dots&#39;</code></td>
+<td>指示点容器 class</td>
+</tr>
+<tr>
+<td>draggable</td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>在 PC 上启用拖拽</td>
+</tr>
+<tr>
+<td>easing</td>
+<td>string</td>
+<td><code>&#39;linear&#39;</code></td>
+<td>animate() 回退 easing</td>
+</tr>
+<tr>
+<td>edgeFriction</td>
+<td>integer</td>
+<td><code>0.15</code></td>
+<td>非循环 slider 滚动到边缘时阻尼</td>
+</tr>
+<tr>
+<td>fade</td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>是否使用 fade 效果</td>
+</tr>
+<tr>
+<td>arrows</td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>是否启用上下翻页箭头</td>
+</tr>
+<tr>
+<td>appendArrows</td>
+<td>string</td>
+<td><code>$(element)</code></td>
+<td>Change where the navigation arrows are attached (Selector, htmlString, Array, Element, jQuery object)</td>
+</tr>
+<tr>
+<td>appendDots</td>
+<td>string</td>
+<td><code>$(element)</code></td>
+<td>Change where the navigation dots are attached (Selector, htmlString, Array, Element, jQuery object)</td>
+</tr>
+<tr>
+<td>mobileFirst</td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>响应式设置按照移动优先方式计算</td>
+</tr>
+<tr>
+<td>prevArrow</td>
+<td>string (html / jQuery selector) <em>or</em> object (DOM node / jQuery object)</td>
+<td><code>&lt;button type=&quot;button&quot; class=&quot;slick-prev&quot;&gt;Previous&lt;/button&gt;</code></td>
+<td>向上翻页箭头</td>
+</tr>
+<tr>
+<td>nextArrow</td>
+<td>string (html/jQuery selector) <em>or</em> object (DOM node/jQuery object)</td>
+<td><code>&lt;button type=&quot;button&quot; class=&quot;slick-next&quot;&gt;Next&lt;/button&gt;</code></td>
+<td>向下翻页箭头</td>
+</tr>
+<tr>
+<td>infinite</td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>无限循环模式</td>
+</tr>
+<tr>
+<td>initialSlide</td>
+<td>integer</td>
+<td><code>0</code></td>
+<td>初始 slide 编号</td>
+</tr>
+<tr>
+<td>lazyLoad</td>
+<td>string</td>
+<td><code>&#39;ondemand&#39;</code></td>
+<td>懒加载方式： <code>&#39;ondemand&#39;</code> 或 <code>&#39;progressive&#39;</code></td>
+</tr>
+<tr>
+<td>pauseOnHover</td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>hover 时是否暂停自动播放</td>
+</tr>
+<tr>
+<td>pauseOnDotsHover</td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>指示点 hover 时是否暂停自动播放</td>
+</tr>
+<tr>
+<td>respondTo</td>
+<td>string</td>
+<td><code>&#39;window&#39;</code></td>
+<td>responsive 设置响应的宽度的目标，<code>&#39;window&#39;</code> 或 <code>&#39;slider&#39;</code> 或 <code>&#39;min&#39;</code>（两者取较小的）</td>
+</tr>
+<tr>
+<td>responsive</td>
+<td>object</td>
+<td><code>null</code></td>
+<td>包含断点和设置的对象。<code>settings</code> 设置为 <code>&#39;unslick&#39;</code> 可以在该区间禁用 slick。</td>
+</tr>
+<tr>
+<td>rows</td>
+<td>int</td>
+<td><code>1</code></td>
+<td>每一屏显示的行数</td>
+</tr>
+<tr>
+<td>slide</td>
+<td>string</td>
+<td><code>&#39;&#39;</code></td>
+<td>Slide element query</td>
+</tr>
+<tr>
+<td>slidesPerRow</td>
+<td>int</td>
+<td><code>1</code></td>
+<td><code>rows</code> 大于 <code>1</code> 时每行上显示的 slide 数量</td>
+</tr>
+<tr>
+<td>slidesToShow</td>
+<td>int</td>
+<td><code>1</code></td>
+<td># of slides to show at a time</td>
+</tr>
+<tr>
+<td>slidesToScroll</td>
+<td>int</td>
+<td><code>1</code></td>
+<td>每次滚动的 slide 数量</td>
+</tr>
+<tr>
+<td>speed</td>
+<td>int</td>
+<td><code>300</code></td>
+<td>transition 速度</td>
+</tr>
+<tr>
+<td>swipe</td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>Enables touch swipe</td>
+</tr>
+<tr>
+<td>swipeToSlide</td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Swipe to slide irrespective of slidesToScroll</td>
+</tr>
+<tr>
+<td>touchMove</td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>Enables slide moving with touch</td>
+</tr>
+<tr>
+<td>touchThreshold</td>
+<td>int</td>
+<td><code>5</code></td>
+<td>To advance slides, the user must swipe a length of (1/touchThreshold) * the width of the slider.</td>
+</tr>
+<tr>
+<td>useCSS</td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>是否使用 CSS transition</td>
+</tr>
+<tr>
+<td>variableWidth</td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>禁用 slide 宽度自动计算</td>
+</tr>
+<tr>
+<td>vertical</td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>垂直方向滚动</td>
+</tr>
+<tr>
+<td>verticalSwiping</td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>将 swipe 方向改为垂直方向</td>
+</tr>
+<tr>
+<td>rtl</td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td><code>rtl</code> 模式</td>
+</tr>
+<tr>
+<td>waitForAnimate</td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>Ignores requests to advance the slide while animating</td>
+</tr>
+<tr>
+<td>zIndex</td>
+<td>number</td>
+<td><code>1000</code></td>
+<td>slider <code>z-index</code></td>
+</tr>
+</tbody></table><h2><a name="shi-jian" class="anchor" href="#shi-jian"><span class="header-link"></span></a>事件</h2><div class="doc-code demo-highlight"><pre><code class="javascript"><span class="hljs-comment">// On swipe event</span>
+$(<span class="hljs-string">'.your-element'</span>).on(<span class="hljs-string">'swipe'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event, slick, direction</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(direction);
+  <span class="hljs-comment">// left</span>
+});
+
+<span class="hljs-comment">// On edge hit</span>
+$(<span class="hljs-string">'.your-element'</span>).on(<span class="hljs-string">'edge'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event, slick, direction</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'edge was hit'</span>)
+});
+
+<span class="hljs-comment">// On before slide change</span>
+$(<span class="hljs-string">'.your-element'</span>).on(<span class="hljs-string">'beforeChange'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event, slick, currentSlide, nextSlide</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(nextSlide);
+});</code></pre></div><table class="am-table am-table-bordered am-table-striped"><thead><tr>
+<th>事件</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody><tr>
+<td>afterChange</td>
+<td>event, slick, currentSlide</td>
+<td>slide 切换以后触发</td>
+</tr>
+<tr>
+<td>beforeChange</td>
+<td>event, slick, currentSlide, nextSlide</td>
+<td>slide 切换以前触发</td>
+</tr>
+<tr>
+<td>breakpoint</td>
+<td>event, slick, breakpoint</td>
+<td>到达某个 breakpoint 时触发</td>
+</tr>
+<tr>
+<td>destroy</td>
+<td>event, slick</td>
+<td>Slick 销毁或 unslick 的时候触发</td>
+</tr>
+<tr>
+<td>edge</td>
+<td>event, slick, direction</td>
+<td>非无限循环模式下到达边缘时触发</td>
+</tr>
+<tr>
+<td>init</td>
+<td>event, slick</td>
+<td>Slick 初始化时触发</td>
+</tr>
+<tr>
+<td>reInit</td>
+<td>event, slick</td>
+<td>每次重新初始化时触发</td>
+</tr>
+<tr>
+<td>setPosition</td>
+<td>event, slick</td>
+<td>每次重新计算位置时触发</td>
+</tr>
+<tr>
+<td>swipe</td>
+<td>event, slick, direction</td>
+<td><code>swipe</code>/<code>drag</code> 以后触发</td>
+</tr>
+</tbody></table><h2><a name="fang-fa" class="anchor" href="#fang-fa"><span class="header-link"></span></a>方法</h2><div class="doc-code demo-highlight"><pre><code class="javascript"><span class="hljs-comment">// Add a slide</span>
+$(<span class="hljs-string">'.your-element'</span>).slick(<span class="hljs-string">'slickAdd'</span>, <span class="hljs-string">"&lt;div&gt;&lt;/div&gt;"</span>);
+
+<span class="hljs-comment">// Get the current slide</span>
+<span class="hljs-keyword">var</span> currentSlide = $(<span class="hljs-string">'.your-element'</span>).slick(<span class="hljs-string">'slickCurrentSlide'</span>);
+
+<span class="hljs-comment">// Manually refresh positioning of slick</span>
+$(<span class="hljs-string">'.your-element'</span>).slick(<span class="hljs-string">'setPosition'</span>);</code></pre></div><table class="am-table am-table-bordered am-table-striped"><thead><tr>
+<th>方法</th>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody><tr>
+<td>slick</td>
+<td>options : object</td>
+<td>初始化 Slick</td>
+</tr>
+<tr>
+<td>unslick</td>
+<td></td>
+<td>销毁 Slick</td>
+</tr>
+<tr>
+<td>slickNext</td>
+<td></td>
+<td>切换到下一个 slide</td>
+</tr>
+<tr>
+<td>slickPrev</td>
+<td></td>
+<td>切换到上一个 slide</td>
+</tr>
+<tr>
+<td>slickPause</td>
+<td></td>
+<td>暂停自动播放</td>
+</tr>
+<tr>
+<td>slickPlay</td>
+<td></td>
+<td>开始自动播放</td>
+</tr>
+<tr>
+<td>slickGoTo</td>
+<td>index: <code>int</code>, dontAnimate: <code>bool</code></td>
+<td>切换到指定索引的 slide，第二参数为 <code>true</code> 没有动画效果</td>
+</tr>
+<tr>
+<td>slickCurrentSlide</td>
+<td></td>
+<td>返回当前 slide 的索引</td>
+</tr>
+<tr>
+<td>slickAdd</td>
+<td>element : html or DOM object, index: int, addBefore: bool</td>
+<td>添加 slide: 如果设置了 <code>index</code> 则插入到指定为位置；如果没有设置 <code>index</code> 则插入到末尾，设置了 <code>addBefore</code> 则插入到开始位置</td>
+</tr>
+<tr>
+<td>slickRemove</td>
+<td>index: int, removeBefore: bool</td>
+<td>移除指定编号的 slide。If removeBefore is set true, remove slide preceding index, or the first slide if no index is specified. If removeBefore is set to false, remove the slide following index, or the last slide if no index is set.</td>
+</tr>
+<tr>
+<td>slickFilter</td>
+<td>filter : selector or function</td>
+<td>使用 jQuery <code>.filter</code> 语法过滤 slide</td>
+</tr>
+<tr>
+<td>slickUnfilter</td>
+<td></td>
+<td>移除过滤器</td>
+</tr>
+<tr>
+<td>slickGetOption</td>
+<td>option : string(option name)</td>
+<td>获取选项的值</td>
+</tr>
+<tr>
+<td>slickSetOption</td>
+<td>option : string(option name), value : depends on option, refresh : boolean</td>
+<td>动态设置 Slick 选项，如果需要刷新则将 <code>refresh</code> 设置为 <code>true</code></td>
+</tr>
+</tbody></table>
+
+    <nav class="amp-pager">
+        <ul class="am-pagination">
+          <li class="am-pagination-prev"><a href="../">&laquo; Prev</a>
+          </li>
+            <li class="am-pagination-next"><a href="demo.html">Next &raquo;</a>
+            </li>
+        </ul>
+    </nav>
+  </div>
+</section>
+
+<footer class="amp-footer"><div class="am-g am-g-fixed"><div class="am-u-md-4 am-u-md-push-8"><ul class="amz-social"><li><a href="javascript: void(0)" data-am-popover="{content: 'Amaze UI 交流 Q 群：374946651'}" title="Amaze UI 用户交流群" target="_blank"><span class="am-icon-qq"></span></a></li><li><a href="http://weibo.com/allmobilize" title="云适配微博" target="_blank"><span class="am-icon-weibo"></span></a></li><li><a href="#am-wechat" title="云适配微信" data-am-modal><span class="am-icon-wechat"></span></a></li><li><a class="new-issue" href="https://github.com/allmobilize/amazeui/issues/new?title=Bug%3A%20&body=**%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0**%0A%0A%EF%BC%88%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E9%97%AE%E9%A2%98%EF%BC%89%0A%0A**%E4%BA%A7%E7%94%9F%E7%8E%AF%E5%A2%83**%0A%0A-%20%E8%AE%BE%E5%A4%87%EF%BC%9A%EF%BC%88%E6%89%8B%E6%9C%BA%E3%80%81%E5%B9%B3%E6%9D%BF%E7%AD%89%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87%E6%97%B6%E5%A1%AB%E5%86%99%E6%AD%A4%E9%A1%B9%EF%BC%89%0A-%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%BC%94%E7%A4%BA%E5%9C%B0%E5%9D%80%EF%BC%9A%0A%0A**%E5%A4%8D%E7%8E%B0%E6%AD%A5%E5%A5%8F**%0A%0A1.%20%0A2.%20%0A...%20%0A%20%0A**UA:**%20%0A" target="_blank" title="Bug 反馈"><span class="am-icon-paper-plane"></span></a></li></ul></div><div class="col-md-8 col-md-pull-4 am-u-md-8 am-u-md-pull-4"><h2 class="amz-fd"><a>云适配</a></h2><ul class="amz-links"><li><a href="http://amazeui.org/about/wantu" class="am-icon-heart">&nbsp;妹子招亲</a> | <a href="http://amazeui.org/about/contact">联系我们</a></li></ul><p class="amz-cp">&copy; 2015 AllMobilize, Inc. <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. Developed with <a href="http://www.jetbrains.com/webstorm/" target="_blank">WebStorm</a>.</p></div></div></footer><div class="am-modal am-modal-no-btn" tabindex="-1" id="am-wechat"><div class="am-modal-dialog"><div class="am-modal-hd"><a href="" class="am-close am-close-spin" data-am-modal-close>&times;</a></div><div class="am-modal-bd"><img src="http://s.amazeui.org/assets/2.x/i/am/qr-ui.jpg" alt="Amaze UI 微信"/><br/>在微信上关注我们</div></div></div><div class="amp-toolbar" id="amp-toolbar"><a href="#top" title="回到顶部" class="am-icon-btn am-icon-arrow-up" id="amp-go-top"></a></div>
+<script src="http://s.amazeui.org/assets/plugin/js/app.min.js"></script>
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?b424d39312c46404f15e22574a531fbb";
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hm);
+  })();
+
+  (function(w, d, s) {
+    function gs(){
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(w , d, s ,'//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-34196034-8', 'amazeui.org');
+      ga('send', 'pageview');
+    }
+    if (w.addEventListener) { w.addEventListener('load', gs, false); }
+    else if (w.attachEvent) { w.attachEvent('onload',gs); }
+  }(window, document, 'script'));
+</script>
+</body>
+</html>
